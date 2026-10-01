@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  soc-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aegis-soc-backend
+    restart: unless-stopped
+    ports:
+      - "8880:8880"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GROQ_DEFAULT_MODEL=llama-3.3-70b-versatile
+      - DATABASE_URL=sqlite:///./soc_data.db
+    volumes:
+      - soc_storage:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8880/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  soc-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: aegis-soc-dashboard
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    depends_on:
+      - soc-api
+
+volumes:
+  soc_storage:

@@ -1,0 +1,21 @@
+[
+  "tests/test_detection_engine.py::test_auth_fail_then_success_rule",
+  "tests/test_detection_engine.py::test_benign_traffic_no_alerts",
+  "tests/test_detection_engine.py::test_lolbin_execution",
+  "tests/test_detection_engine.py::test_password_spray_rule_triggers",
+  "tests/test_detection_engine.py::test_port_scan_rule",
+  "tests/test_detection_engine.py::test_ssh_bruteforce_rule_triggers",
+  "tests/test_detection_engine.py::test_suspicious_dns_dga",
+  "tests/test_detection_engine.py::test_unusual_c2_beacon",
+  "tests/test_e2e_incident_lifecycle.py::test_full_incident_lifecycle_e2e",
+  "tests/test_normalization.py::test_linux_auth_adapter",
+  "tests/test_normalization.py::test_suricata_adapter_normalization",
+  "tests/test_normalization.py::test_sysmon_adapter_process_create",
+  "tests/test_normalization.py::test_wazuh_adapter_normalization",
+  "tests/test_response_control_plane.py::test_approved_action_and_rollback",
+  "tests/test_response_control_plane.py::test_dry_run_allowed_without_approval",
+  "tests/test_response_control_plane.py::test_unapproved_action_fails_closed",
+  "tests/test_risk_scoring.py::test_deterministic_risk_critical",
+  "tests/test_risk_scoring.py::test_deterministic_risk_low",
+  "tests/test_risk_scoring.py::test_score_bounded_at_100"
+]

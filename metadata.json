@@ -1,0 +1,6 @@
+{
+  "name": "Collaborative Multi-Agent AI SOC",
+  "description": "Collaborative Multi-Agent AI Framework for Intelligent Threat Detection, Investigation, Risk Assessment, and Controlled Incident Response in a Security Operations Center.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
